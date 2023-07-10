@@ -2,7 +2,7 @@
 title: Jeon Soohyun
 author: Jeon Soohyun
 date: 2023-07-9 20:55:00 +0800
-categories: [Blogging, Tutorial]
+categories: [Introduction]
 tags: [getting started]
 pin: true
 ---
