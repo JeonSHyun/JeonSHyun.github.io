@@ -2,37 +2,21 @@
 title: Jeon Soohyun
 author: Jeon Soohyun
 date: 2023-07-9 20:55:00 +0800
-categories: [Introduction]
+categories: [Introduction, Resume]
 tags: [getting started]
 pin: true
 ---
 
-## Prerequisites
+## Education
 
-## Installation
+B.S. Life Science, Brain and Cognitive Science (Korea University, 2017.03 - 2021.08)
+M.S. Brain and Cognitive Engineering (Korea University, 2021.09 - Present)
 
-### Creating a New Site
+## Research Experience
 
-#### Option 1. Using the Chirpy Starter
+iPEL Laboratory Internship (Korea University, 2018.12 - 2019.01)
+Neuroscience Laboratory Internship (Korea University, 2020.02 - 2021.03)
+BSPL Internship (Korea University, 2021.01 - 2021.08)
+BSPL Graduate Student (Korea University, 2021.09 - Present)
 
-#### Option 2. Forking on GitHub
-
-### Installing Dependencies
-
-## Usage
-
-### Configuration
-
-### Customizing Stylesheet
-
-### Customing Static Assets
-
-### Running Local Server
-
-## Deployment
-
-### Deploy by Using GitHub Actions
-
-### Manually Build and Deploy
-
-## Upgrading
+## Other Experience
