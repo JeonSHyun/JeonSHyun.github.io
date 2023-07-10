@@ -18,15 +18,14 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Jeon Soohyun                          # the main title
-
-tagline: A graduate student interested in brain science and genetics     # it will display as the sub-title
+title: Jeon Soohyun
+tagline: A graduate student interested in brain science and genetics
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://jeonshyun.github.io'''
+url: 'https://jeonshyun.github.io'
 
 github:
   username: JeonSHyun             # change to your github username
@@ -70,7 +69,7 @@ google_analytics:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode:   # [light|dark]
+theme_mode: dark
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
