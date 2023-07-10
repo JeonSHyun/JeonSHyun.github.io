@@ -20,7 +20,7 @@ timezone: Asia/Seoul
 
 title: Jeon Soohyun                          # the main title
 
-tagline: Graduate Student   # it will display as the sub-title
+tagline: A graduate student interested in brain science and genetics     # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
