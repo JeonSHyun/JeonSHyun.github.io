@@ -1,5 +1,5 @@
 ---
-title: The association between neuronal activation and gene expression in ADHD explains impulsive behavior
+title: Spatial localization of lower limb movement on whole brain using 3D-pose estimation: an fMRI study
 author: JSH
 date: 2023-07-09 20:55:00 +0800
 categories: [Introduction, Conference]
