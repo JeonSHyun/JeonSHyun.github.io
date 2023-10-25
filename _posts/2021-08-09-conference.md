@@ -3,7 +3,8 @@ title: Cortical localization of lower-limb movement using 3D-pose with MRI-compa
 author: JSH
 date: 2021-08-09 20:55:00 +0800
 categories: [Introduction, Conference]
-tags: [Conference]
+tags: [Conference, BESK]
 ---
 
-## Experience
+## Authors
+Minji Park, Sungman Jo, Dong-Youl Kim, MinSeok Choi, **Soohyun Jeon**, Inchan Youn, Song Joo Lee, Jong-Hwan Lee
