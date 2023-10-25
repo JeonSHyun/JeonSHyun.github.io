@@ -51,7 +51,7 @@ google_analytics:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
     cache_path:       # the local PV cache data, friendly to visitors from GFW region
 
-theme_mode: dark
+theme_mode: light
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
