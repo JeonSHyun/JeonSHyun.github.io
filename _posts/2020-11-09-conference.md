@@ -1,5 +1,5 @@
 ---
-title: Control of arkypallidal neurons in the GPe affects impulsivity in mice
+title: Increase in the arkypallidal neuron-projecting bridging collaterals in the GPe induces impulsive behavior in mice
 author: JSH
 date: 2020-11-09 20:55:00 +0800
 categories: [Introduction, Conference]
