@@ -1,7 +1,7 @@
 ---
 title: Control of arkypallidal neurons in the GPe affects impulsivity in mice
 author: JSH
-date: 2020-11-09 20:55:00 +0800
+date: 2021-05-09 20:55:00 +0800
 categories: [Introduction, Conference]
 tags: [Conference, KSBNS]
 ---
