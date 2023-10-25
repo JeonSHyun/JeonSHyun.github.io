@@ -3,7 +3,8 @@ title: Identification of the components of attention-deficit hyperactivity disor
 author: JSH
 date: 2022-11-09 20:55:00 +0800
 categories: [Introduction, Conference]
-tags: [Conference]
+tags: [Conference, KHBM]
 ---
 
-## Experience
+## Authors
+**Soohyun Jeon**, Jae-Eon Kang, Jundong Hwang, Jong-Hwan Lee
