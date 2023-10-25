@@ -3,7 +3,8 @@ title: Identification of the independent components of the attention-deficit hyp
 author: JSH
 date: 2022-02-09 20:55:00 +0800
 categories: [Introduction, Conference]
-tags: [Conference]
+tags: [Conference, BESK]
 ---
 
-## Experience
+## Authors
+**Soohyun Jeon**, Jae-Eon Kang, Jundong Hwang, Jong-Hwan Lee
