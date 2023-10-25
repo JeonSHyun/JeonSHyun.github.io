@@ -3,7 +3,8 @@ title: Transfer Learning of Scanner-Generalization Neural Networks for Predictin
 author: JSH
 date: 2022-10-09 20:55:00 +0800
 categories: [Introduction, Conference]
-tags: [Conference]
+tags: [Conference, AACAP]
 ---
 
-## Experience
+## Authors
+Jundong Hwang, Jinwoo Hong, Jae-Eon Kang, **Soohyun Jeon**, Kyung Hwa Lee, Jong-Hwan Lee, Jae-Won Kim
