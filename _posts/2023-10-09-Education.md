@@ -9,16 +9,16 @@ pin: true
 
 ## Graduate
 
-### **Department of Brain and Cognitive Engineering**
+### Department of Brain and Cognitive Engineering
 
 _Korea University_ (2021.09 - Present)
 
 ## Undergraduate
 
-### **Department of Life Science**
+### Department of Life Science
 
 _Korea University_ (2017.03 - 2021.08)
 
-### **Department of Brain and Cognitive Science**
+### Department of Brain and Cognitive Science
 
 _Korea University_ (2019.03 - 2021.08)
