@@ -3,7 +3,7 @@ title: Education
 author: JSH
 date: 2023-10-09 20:55:00 +0800
 categories: [Introduction, Resume]
-tags: [Resume, Education]
+tags: [Education]
 pin: true
 ---
 
