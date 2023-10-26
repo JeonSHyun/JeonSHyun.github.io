@@ -7,12 +7,16 @@ tags: [Resume, Education]
 pin: true
 ---
 
-## B.S. 
-Life Science, Brain and Cognitive Science 
-Korea University
-2017.03 - 2021.08
+## Graduate
 
-## M.S. 
-Brain and Cognitive Engineering
-Korea University
-2021.09 - Present
+**Department of Brain and Cognitive Engineering**
+
+_Korea University_ (2021.09 - Present)
+
+## Undergraduate
+
+**Department of Life Science**
+
+**Department of Brain and Cognitive Science**
+
+_Korea University_ (2017.03 - 2021.08)
