@@ -9,9 +9,9 @@ pin: true
 
 ## Graduate
 
-### Department of Brain and Cognitive Engineering
+### Department of Brain and Cognitive Engineering (Master)
 
-_Korea University_ (2021.09 - Present)
+_Korea University_ (2021.09 - 2024.02)
 
 ## Undergraduate
 
