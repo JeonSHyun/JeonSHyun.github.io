@@ -4,7 +4,6 @@ author: JSH
 date: 2023-10-09 20:55:00 +0800
 categories: [Introduction, Resume]
 tags: [Education]
-pin: true
 ---
 
 ## Graduate
