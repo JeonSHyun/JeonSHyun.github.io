@@ -3,7 +3,7 @@ title: Predicting Impulsivity in Children with Attention Deficit Hyperactivity D
 author: JSH
 date: 2024-02-28 20:55:00 +0800
 categories: [Publication, Conference]
-tags: [Conference, BESK]
+tags: [Conference, BESK, Best Poster Awards]
 ---
 
 ## Autors
