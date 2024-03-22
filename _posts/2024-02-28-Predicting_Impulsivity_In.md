@@ -1,5 +1,5 @@
 ---
-title: Predicting Impulsivity in Children with Attention Deficit Hyperactivity Disorder using Parallel Independent Component Analysis
+title: Predicting Impulsivity in Children with Attention Deficit Hyperactivity Disorder using Parallel Independent Component Analysis (Best Poster Awards)
 author: JSH
 date: 2024-02-28 20:55:00 +0800
 categories: [Publication, Conference]
