@@ -3,7 +3,7 @@ title: Imaging genetics study of attention-deficit/hyperactivity disorder using 
 author: JSH
 date: 2023-10-28 20:55:00 +0800
 categories: [Publication, Conference]
-tags: [Conference, KHBM]
+tags: [Conference, KHBM, Oral Presentation]
 ---
 
 ## Autors
