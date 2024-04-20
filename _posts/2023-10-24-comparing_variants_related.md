@@ -10,7 +10,7 @@ pin: true
 ![image](https://github.com/JeonSHyun/JeonSHyun.github.io/assets/86886562/e00d527d-2022-4b12-a70f-d0d32320de2f)
 
 ## Authors
-**Soohyun Jeon***, Chaewon Park*, Jineui Kim, Jung Hoon Lee, Sung-yune Joe, Young Kyung Ko, Jeong-An Gim
+Soohyun Jeon*, Chaewon Park*, Jineui Kim, Jung Hoon Lee, Sung-yune Joe, Young Kyung Ko, Jeong-An Gim
 
 ## Abstract
 ### Background
