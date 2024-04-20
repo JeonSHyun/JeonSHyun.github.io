@@ -29,7 +29,7 @@ Metabolomics simultaneously quantifies multiple small molecule types, such as am
 ### Microbiome
 Microbiomics is a field in which all the microorganisms of a given community are investigated together. Human skin, mucosal surfaces, and the gut are colonized by microorganisms, including bacteria, viruses, and fungi, collectively known as the microbiota (and their genes constituting the microbiome). There are substantial variations in microbiota composition between individuals resulting from seed during birth and development, diet and other environmental factors, drugs, and age. Many studies have implicated perturbations in gut bacteria in a variety of disorders, including diabetes, obesity, cancer, colitis, heart disease, and autism. The microbiome can be profiled by amplifying and then sequencing certain hypervariable regions of the bacterial 16S rRNA genes followed by clustering the sequences into operational taxonomic units. Shotgun metagenomics sequencing, in which total DNA is sequenced, can provide additional resolution for distinguishing genetically close microbial species. Associated technologies include NGS application for 16S ribosomal abundance and metagenomics quantification.
 
-### Reference
+## Reference
 
 [1] https://en.wikipedia.org/wiki/Multiomics
 
