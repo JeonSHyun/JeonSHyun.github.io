@@ -9,6 +9,10 @@ tags: [Study, Bioinformatics]
 ## Multiomics
 Multiomics is a biological analysis approach in which the data sets are multiple "omes", such as the genome, proteome, transcriptome, epigenome, metabolome, and microbiome; in other words, the use of multiple omics technologies to study life in a concerted way. By combining these "omes", scientists can analyze complex biological big data to find novel associations between biological entities, pinpoint relevant biomarkers and build elaborate markers of disease and physiology. In doing so, multiomics integrates diverse omics data to find a coherently matching geno-pheno-envirotype relationship or association.
 
+
+![image](https://github.com/JeonSHyun/JeonSHyun.github.io/assets/86886562/04f3a639-e45c-4bc3-9ddc-9c4ed5b37502)
+
+
 ## Omics data types
 ### Genome
 In the realm of medical research, genomics focuses on identifying genetic variants associated with disease, response to treatment, or future patient prognosis. GWAS is a successful approach that has been used to identify thousands of genetic variants associated with complex diseases in multiple human populations. In such studies, thousands of individuals are genotyped for more than a million genetic markers, and statistically significant differences in minor allele frequencies between cases and controls are considered evidence of association. GWAS studies provide an invaluable contribution to our understanding of complex phenotypes. Associated technologies include genotype arrays, NGS for whole-genome sequencing, and exome sequencing.
@@ -18,6 +22,7 @@ Proteomics is used to quantify peptide abundance, modification, and interaction.
 
 ### Transcriptome
 Transcriptomics examines RNA levels genome-wide, both qualitatively (which transcripts are present, identification of novel splice sites, RNA editing sites) and quantitatively (how much of each transcript is expressed). The central dogma of biology viewed RNA as a molecular intermediate between DNA and proteins, which are considered the primary functional read-out of DNA. Other examples of RNA function, such as structural (e.g., ribosomal complexes), or regulatory (e.g., Xist in ChrX inactivation) have often been regarded as odd exceptions to the general rule.
+
 The advent of large transcriptomic studies in the past decade has shown that while only ~3% of the genome encodes proteins, up to 80% of the genome is transcribed. RNA-Seq studies identified thousands of novel isoforms and showed a larger than previously appreciated complexity of the protein-coding transcriptome. However, an even more significant contribution of these studies was the development of the non-coding RNA field. It is now clear that thousands of long non-coding RNAs transcribed play essential roles in many physiological processes and various diseases. In addition to long non-coding RNA, NGS allows interrogation of short RNAs (microRNAs, piwi-interacting RNAs, and small nuclear RNAs) and identification of circular RNAs. Much like long non-coding RNAs, a growing body of evidence points to dysregulation of short and circular RNAs in disease and the potential use thereof as biomarkers or as therapeutic targets. Associated technologies include probe-based arrays and RNA-Seq.
 
 ### Epigenome
