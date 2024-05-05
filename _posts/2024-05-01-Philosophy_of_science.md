@@ -7,7 +7,6 @@ tags: [Study, Philosophy]
 ---
 
 ## Commonalities in research methods
-
 * Sophisticated observation
 * Experimentation
 * Multiple lines of evidence
@@ -36,11 +35,41 @@ The most fundamental source of scientific knowledge.
 It involves using our senses, perhaps augmented with instrumentation, to discover what happened in the past, what is happening now, and to discover patterns and dependencies. 
 To be a little more precise, scientists observe single instances or snapshots of the way that the world is. 
 We can call these things events. 
-But scientists often make repeated observations or look for patterns and distributions in their observations. 
+But scientists often make repeated observations or look for patterns and distributions in their observations.
 These more generalized observations are called phenomena.
 
 #### Experiment
+Two reasons why interventions are so important: to create a phenomenon; to isolate a phenomenon.
+
 #### Simulation
+A simulation consists of a model and initial conditions. 
+We can think of a model as a representation of some real or imagined part of the world, and the initial conditions as the starting point.
+
+##### Are they really empirical and how can we be sure if they're reliable?
+
+Similarities between experiments and simulations: scientists create conditions to test what happens when one or just a few variables are manipulated. 
+Although experimental systems are physically in the world in the way that most models are not, experimental manipulations happen on experimental systems, which are often modified versions of what we'd find in the world.
+
+Moreover, the components of models and the initial conditions of the models are of course based on prior observations about the world.
+
+Despite possibly seeming not empirical, simulations really are thoroughly empirical. 
+We can think of simulations as a tool for exploring the consequences effects that we have determined empirically, or facts that we would need to further investigate empirically.
+
+Then, how do we know we haven't neglected some important process or factor that will be important in the future?
+How do we know that the future will resemble the past in the important respects?
+How do we know that there isn't an additional consideration we've neglected?
+Openness to the possibility that some as-yet-undiscovered factor will prove to be important.
+
+
+### Mill's methods
+To establish a causal relationship between two or more groups of data, analyzing their respective differences and similarities.
+
+#### Method of agreement
+If two or more instances of the phenomenon under investigation have only one circumstance in common, the circumstance in which alone all the instances agree, is the cause (or effect) of the given phenomenon.
+
+#### Method of disagreement
+If an instance in which the phenomenon under investigation occurs, and an instance in which it does not occur, have every circumstance save one in common, that one occurring only in the former; the circumstance in which alone the two instances differ, is the effect, or cause, or an indispensable part of the cause, of the phenomenon.
+
 
 ## Reference
 [1] https://en.wikipedia.org/wiki/Blinded_experiment
