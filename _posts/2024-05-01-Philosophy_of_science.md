@@ -28,6 +28,12 @@ Observations are public.
 Public observation ought to be free of bias.
 Science helps us to learn about the world, not the products of our own minds.
 
+Observation should be thought of as reliable detection. 
+We observe in this technical sense when we use a combination of our senses and technology to reliably detect something in the world. 
+Understood this way in some domains sensors are video cameras are often more reliable than our own senses. 
+So when we say that the foundation of science is empirical or observational we should understand it in this way.
+The foundation is the reliable detection of what's in the world.
+
 ### Scientific knowledge
 
 #### Straight observation (observation)
