@@ -1,5 +1,5 @@
 ---
-title: Philosophy of science
+title: Philosophy of science (Week 1-2)
 author: JSH
 date: 2024-05-01 20:55:00 +0800
 categories: [Study, Philosophy]
