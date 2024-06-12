@@ -4,7 +4,6 @@ author: JSH
 date: 2023-10-10 20:55:00 +0800
 categories: [Introduction, Resume]
 tags: [Research Experience]
-pin: true
 ---
 
 ## Brain Signal Processing Laboratory
