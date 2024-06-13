@@ -60,7 +60,8 @@ theme_mode: light
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: #'https://chirpy-img.netlify.app' # 24.6.13 공백처리
+img_cdn:
+#'https://chirpy-img.netlify.app' # 24.6.13 공백처리
 
 # The avatar on sidebar, support local or CORS resources
 avatar: assets/img/profile.jpg
