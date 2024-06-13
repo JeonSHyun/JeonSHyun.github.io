@@ -60,10 +60,10 @@ theme_mode: light
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: 'https://chirpy-img.netlify.app'
+# img_cdn: 'https://chirpy-img.netlify.app' # 24.6.13 주석처리함
 
 # The avatar on sidebar, support local or CORS resources
-avatar: ![profile](https://github.com/JeonSHyun/JeonSHyun.github.io/assets/86886562/c9748924-de69-47ef-a629-e20182c21bcf)
+avatar: assets/img/profile.jpg
 
 # boolean type, the global switch for ToC in posts.
 toc: true
