@@ -39,7 +39,7 @@ $g_{\theta} = \frac{1}{\sqrt{2\pi}\sigma}a^{-\frac{1}{2}(z-\mu)^{2}/\sigma^{2}}$
 
 **Loglikelihood** function $l(\theta; Z) = \prod_{i=1}^N \log{g_\theta (z_i)}$
 
-$\hat{\theta}_{MLE} = \arg\max_{\theta} L(\theta; x) = \arg \max_{\theta} P(x|\theta)$
+$\hat{\theta}_{MLE} = \arg\max{\theta}L(\theta; x) = \arg \max_{\theta}P(x \mid \theta)$
 
 **Score** function $j(\theta; Z) = \sum_{j=1}^N j(\theta; z_j)$ , where $j(\theta; Z) = \frac{\partial l (\theta; z_i)}{\partial \theta}$
 
@@ -47,6 +47,17 @@ $\hat{\theta}_{MLE} = \arg\max_{\theta} L(\theta; x) = \arg \max_{\theta} P(x|\t
 
 **Fisher** information $i(\theta) = E_{\theta}[I(\theta)]$
 
+### Sampling distribution of $\hat{\theta}$
+$N(\hat{\theta}, i(\hat{\theta})^{-1})$ or $N(\hat{\theta}, I(\hat{\theta})^{-1})$
+
+### Estimation for the standard errors of $\hat{\theta}_j$
+$\sqrt{i(\hat{\theta})^{-1}_{jj}}$ and $\sqrt{I(\hat{\theta})^{-1}_{jj}}$
+
+### Confidence points for $\theta_j$
+$\hat{\theta}_j\pm z(1-\alpha)\cdot\sqrt{\left[i(\hat{\theta})^{-1}\right]_{jj}}$ or $\hat{\theta}_j\pm z(1-\alpha)\cdot\sqrt{\left[I(\hat{\theta})^{-1}\right]_{jj}}$
+
+### More accurate CI of $\theta_j$
+$2\left[l(\hat{\theta}) - l(\theta_0)\right]\sim \chi^{2}_p$
 
 # Bayesian methods
 
