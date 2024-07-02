@@ -59,8 +59,18 @@ $\hat{\theta}_j\pm z(1-\alpha)\cdot\sqrt{\left[i(\hat{\theta})^{-1}\right]_{jj}}
 ### More accurate CI of $\theta_j$
 $2\left[l(\hat{\theta}) - l(\theta_0)\right]\sim \chi^{2}_p$
 
+
 # Bayesian methods
 
+A sampling model $Pr(Z \mid \theta)$
+
+A prior distribution for the parameters $Pr(\theta)$
+
+Posterior distriubution $Pr(\theta \mid Z) = \frac{Pr(Z \mid \theta)\cdot Pr(\theta)}{\int_{}^{} Pr(Z \mid \theta)\cdot Pr(\theta) d\theta}$
+
+The posterior distributoin provides the basis for predicting the values of a future observation $z^{new}$ via the predictin distribution
+
+$Pr(z^{new} \mid Z) = \int_{}^{} Pr(z^{new} \mid \theta)\cdot Pr(\theta \mid Z)d\theta$
 
 # EM algorithm
 
