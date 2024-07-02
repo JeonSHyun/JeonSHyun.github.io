@@ -66,6 +66,11 @@ layout: compress
 
     {% include js-selector.html %}
 
+<!-- 2024.07.02 Latex 작성을 위해 추가 -->
+     {% if page.use_math %}
+       {% include mathjax_support.html %}
+     {% endif %}        
+    
   </body>
 
 </html>
