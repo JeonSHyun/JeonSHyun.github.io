@@ -182,9 +182,9 @@ jekyll-archives:
     category: /categories/:name/
 
 
- # Conversion
- markdown: kramdown
- highlighter: rouge
- lsi: false
- excerpt_separator: "\n\n"
- incremental: false
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
