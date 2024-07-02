@@ -96,6 +96,21 @@ Stacking is an ensemble learning technique that combines multiple individual mod
 
 ## Bayesian model Averaging
 
+$M_m(m = 1, ...M)$ is training set $Z$.
+
+Suppose $\zeta$ is some quantity of interest, for example, a predition $f(x)$ at some fixed feature value $x$.
+The posterior distribution of $\zeta$ is $Pr(\zeta \mid Z) = \sum_{m=1}^M Pr(\zeta \mid M_m, Z)Pr(M_m \mid Z)$
+
+And posterior mean is $E(\zeta \mid Z) = \sum_{m=1}^M E(\zeta \mid M_m, Z)Pr(M_m \mid Z)$
+
 ## Frequentist model Averaging
+$M_m(m = 1, ..., M)$ is candidate models for our training set Z.
+
+$x$ is fixed and the N observatoins in the dataset Z are distributed according to P.
+
+Given predictors $\hat{f_1(x)}, \hat{f_2(x)}, ..., \hat{f_M(x)}$, under squared-error loss, we can seek weights $\hat{w} = (w_1, w_2, ..., w_M)$ such that $\hat{x} = \arg \min_w E_P left[Y-\sum_{m=1}^M w_M \hat{f_m(x)^2}$
 
 ## Generalized Stacking
+$\hat{w}^{st} = \arg \min_w \sum_{i=1}^N \left[ y_i - \sum_{m=1}^M w_m \hat{f_m^{-i}(x_i)} \right]$
+
+By using the cross-validated predictors $\hat{f_m^{-i}(x_i)}$, stacking avoids givint unfairly high weight to models with higher complexity.
