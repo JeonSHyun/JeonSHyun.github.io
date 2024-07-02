@@ -4,6 +4,7 @@ author: JSH
 date: 2024-07-02 10:08:00 +0800
 categories: [Study, Statistics]
 tags: [Study, Statistics]
+use_math: true
 ---
 
 # Model inference
