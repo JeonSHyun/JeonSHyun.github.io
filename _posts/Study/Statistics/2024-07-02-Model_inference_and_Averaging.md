@@ -108,7 +108,7 @@ $M_m(m = 1, ..., M)$ is candidate models for our training set Z.
 
 $x$ is fixed and the N observatoins in the dataset Z are distributed according to P.
 
-Given predictors $\hat{f_1(x)}, \hat{f_2(x)}, ..., \hat{f_M(x)}$, under squared-error loss, we can seek weights $\hat{w} = (w_1, w_2, ..., w_M)$ such that $\hat{x} = \arg \min_w E_P \left[Y-\sum_{m=1}^M w_M \hat{f_m(x)^2}$ \right]
+Given predictors $\hat{f_1(x)}, \hat{f_2(x)}, ..., \hat{f_M(x)}$, under squared-error loss, we can seek weights $\hat{w} = (w_1, w_2, ..., w_M)$ such that $\hat{x} = \arg \min_w E_P \left[Y-\sum_{m=1}^M w_M \hat{f_m(x)^2} \right]$
 
 ## Generalized Stacking
 $\hat{w}^{st} = \arg \min_w \sum_{i=1}^N \left[ y_i - \sum_{m=1}^M w_m \hat{f_m^{-i}(x_i)} \right]$
