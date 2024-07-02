@@ -73,10 +73,29 @@ The posterior distributoin provides the basis for predicting the values of a fut
 $Pr(z^{new} \mid Z) = \int_{}^{} Pr(z^{new} \mid \theta)\cdot Pr(\theta \mid Z)d\theta$
 
 # EM algorithm
+![image](https://github.com/JeonSHyun/JeonSHyun.github.io/assets/86886562/2dfcbae4-0e8c-4b05-9abc-84c7973bdd59)
 
 
-# Bagging
+# Bagging (Bootstrap aggregating)
+The emsemble learning method that is commonly used to reduce variance within a noisy dataset.
+
+$L$ is training dataset and $L1, L2, ...$ is bootstrap samples.
+
+$\phi(x \mid L1), \phi(x \mid L1), ...$ is learning models.
+
+**Regression** $\phi_B(x) = \frac{1}{B}\sum_{b=1}^B\phi(x, L_b)$
+
+**Classification** $\phi_B(x) = Mode \phi(x, L_b)$
+
+## Hard voting and Soft voting
 
 
 # Model Averagng and stacking
 
+Stacking is an ensemble learning technique that combines multiple individual models to improve predictive performance.
+
+## Bayesian model Averaging
+
+## Frequentist model Averaging
+
+## Generalized Stacking
