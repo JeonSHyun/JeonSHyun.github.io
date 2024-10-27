@@ -19,6 +19,8 @@ Meta-analyses are often important components of a systematic review.
 
 ### Cohen's d
 
+## Fixed effect model
+## Random effect model
 
 ## Reference
 [1] Balduzzi, S., Rücker, G., & Schwarzer, G. (2019). How to perform a meta-analysis with R: a practical tutorial. BMJ Ment Health, 22(4), 153-160.
