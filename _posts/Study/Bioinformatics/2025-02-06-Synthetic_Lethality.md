@@ -1,7 +1,7 @@
 ---
 title: Synthetic lethality
 author: JSH
-date: 2025-02-06 20:55:00 +0800
+date: 2025-02-06 08:55:00 +0800
 categories: [Study, Bioinformatics]
 tags: [Study, Bioinformatics]
 ---
