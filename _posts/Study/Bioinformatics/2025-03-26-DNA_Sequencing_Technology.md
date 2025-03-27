@@ -24,3 +24,36 @@ It often requires concentration adjustments.
 
 ## Second Generation DNA Sequencing
 
+### The process of second-generation sequencing
+* Library preparation
+* Cluster formation
+* Sequencing reaction and imaging
+* Image analysis and base calling
+
+### 454 Sequencing
+* Share DNA
+* Add adaptors
+* Attach to beads. Trap in oil droplet micro-reactors
+* Amplify w/PCR
+* Trap DNA-coated beads in wells (up to 1 million)
+
+### Pyrosequencing: luciferase from fireflies
+Protocol
+* Hybridize sequencing primer
+* Add DNA polymerase, ATP sulfurylase, luciferase, apyrase & substrates (adenosine 5' phosphosulfate (APS) and luciferin)
+* Nucleotide incorporation catalyzes chain reaction that results in light
+* Add bases sequentially, and repeat ~500 times
+
+### 454 sequencing: summary
+First post-Sanger technology (2005).
+
+Used to sequence may microorganisms & Jim Watson's genome (for $2M in 2007).
+
+Longer reads than Illumina, but much lower yield (~500bp).
+
+Rapidly outpaced by other technologies - now essentially obsolete.
+
+### Illumina sequencing
+
+
+
