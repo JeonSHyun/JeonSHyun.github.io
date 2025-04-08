@@ -90,3 +90,48 @@ A molecular hack to sequence longer fragments
 <!-- paired-end sequencing에서 read 횟수는 몇 번까지 갈 수 있을까요?: 4번 이상. -->
 <!-- 합성하고 떼고, sequencing 하고.. 할 수 있어서 여러번 시퀀싱 할 수 있다 (?) -->
 
+## What's Happening in the Illumina Sequencing?
+<!-- 이 챕터는 시험에는 내지는 않을 예정 -->
+
+### Flowcell - one channel (lane)
+MiSeq, HiSeq
+
+### Data Processing
+* Image capture (.tif)
+* Template Generation (.close)
+* Intensities (.cif)
+* Base Calls (.bcl) <!-- sequence와 quality score가 있는 파일. 이거로 fastq 파일을 만든다 -->
+
+### Key Steps in Illumina Sequencing
+* Cycle 0
+  * Focus Calibration
+  * First Base Report
+* Cycle 1
+  * Run infomration
+  * Cluster number estimate
+* Cycle 5
+  * Accuarate cluster number
+* Cycle 25
+  * CHASTITY % passing filter (PF)
+* Cycle 26
+  * Q-score
+
+### Fluorescence Signal Cross-talks
+
+### Phasing and Pre-phasing Correction
+Phasing, <!-- 하나 뒤쳐짐 -->
+prephasing <!-- 하나 더 들어감 -->
+
+### PhiX Spike-in Control
+
+### Base calling
+
+### Quality score
+Representation of probability of base called incorrectly.
+
+#### Phred scaled
+-10 * log_{10} (prob. error)
+
+Readable from ascii character: Q + 33
+
+## Third Generation DNA Sequencing
