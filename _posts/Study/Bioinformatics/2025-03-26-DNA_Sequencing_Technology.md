@@ -161,10 +161,21 @@ Friedreich's Ataxia. Repite expansion. methylation 증가로 볼 수도 있다. 
 RNA-seq를 long read로 보면 isoform을 확신을 가지고 볼 수 있다. -->
 
 ### Pacific Biosciences
-Single-Molecule Real-Time (SMRT) Sequencing
 
+#### Single-Molecule Real-Time DNA Sequencing (SMRT)
+<!-- 민감도를 엄청 높여서 증폭 안하고도 detection 가능하게 -->
+DNA polymerase + ZMW Confinement + Phospholinked Nucleotides
 
+#### Methylation
+<!-- methylation 있는 부분은 합성이 느리게 되니까 그걸 기반으로 알아냄. -->
+Detect base modifications using the kinetics of the polymerization reaction during normal sequencing.
 
+#### SMRT bell
+<!-- 여러번 읽은것 중 신호가 깨끗한 것만 골라서 이용해서 정확도를 높임 -->
 
+#### SMRT Sequencing correction
+* Intramolecular correction: Circular Consensus Sequence (CCS) <!-- 하이파이리드 -->
+* Multimolecular correction <!-- 요즘은 잘 안씀 -->
 
+### Oxford Nanopore Technologies
 
