@@ -135,3 +135,36 @@ Representation of probability of base called incorrectly.
 Readable from ascii character: Q + 33
 
 ## Third Generation DNA Sequencing
+<!-- 원래 reference genome에서는 centromere가 없었다. 똑같은 서열이 반복되는 특징이 있어서 assembly하기 힘들었음 -->
+
+<!-- 2세대와 비교해서 3세대 서열분석기의 가장 큰 차이점은? -->
+
+* 2nd generation
+  * short read
+  * very precise (~99.99%)
+  * need to be amplified
+  * read does not correspond to the molecule one-to-one
+  * low price
+* 3rd generation
+  * long read
+  * less accurate
+  * no need for amplification
+  * Each read reflects a monomolecule
+  * high in price
+
+### short read vs. long read
+Long-read sequencing enables more accurate and contiguous genome assemblies by spanning repetitive regions and reducing fragmentation.
+(e.g., centromere)
+
+<!-- long read seq의 예시
+Friedreich's Ataxia. Repite expansion. methylation 증가로 볼 수도 있다. 증폭하지 않으니 methylation도 볼 수 있다.
+RNA-seq를 long read로 보면 isoform을 확신을 가지고 볼 수 있다. -->
+
+### Pacific Biosciences
+Single-Molecule Real-Time (SMRT) Sequencing
+
+
+
+
+
+
