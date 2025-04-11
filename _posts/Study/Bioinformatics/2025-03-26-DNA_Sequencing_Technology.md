@@ -178,4 +178,85 @@ Detect base modifications using the kinetics of the polymerization reaction duri
 * Multimolecular correction <!-- 요즘은 잘 안씀 -->
 
 ### Oxford Nanopore Technologies
+Portable
 
+#### Nanopore Direct Sequencing
+Nanopore sequencing involves passing single-stranded DNA through a nanopore—an extremely small hole typically around 1 nanometer in diameter. 
+As each nucleotide (A, T, C, or G) passes through the pore, it causes a characteristic change in the electrical current. 
+These changes are measured and used to determine the DNA sequence.
+
+The nanopore is narrow enough that double-stranded DNA cannot pass through directly. 
+Therefore, enzymes such as helicases are used to unwind the DNA into single strands before sequencing.
+
+Methylation can also be distinguished.
+
+* Ultra-Long Reads
+<!-- single molecule sequencer는 공통적으로 read가 매우 길다. short read seqeunce에서는 phasing과 pre phasing이 있어서 길어지면 뿌옇게 되는데 얘들은 signal을 지저분하게 만들지 않는다 -->
+
+* a lot of errors
+* Unless it's SNV analysis, there's usually no big problem <!-- SNV 분석에서는 하나 변이가 매우 중요하기 때문에 -->
+* easy to distinguish isoform
+
+#### Problems with Nanopore basecalling
+* Multiple bases influence the current passing through the pore
+* Through simulation with Brownian Dynamics, we calculated the contribution from triplets of DNA in a solid-state nanopore - 64 current levels
+* Not all of these different currents are distinguishable
+
+#### Adaptive Sampling
+<!-- 전기를 거꾸로 걸어서 다시 빼거나 할 수 있다. 실시간 제어 가능 -->
+
+Strand approaches nanopore
+
+Region of interest
+* Strand is sequenced and analysed in real time
+* Region of interest found. Sequencing continues
+* Nanopore completes sequencing, available for next strand
+
+Not region of interest
+* Strand is sequenced and analysed in real time
+* Sequence seens is not in region of interest. Strand ejected. Nanopore available for next strand
+* Subsequent strand sequenced
+
+### Comparison 
+||Illumina NextSeq|PacBio Sequel 2|Oxford Nanopore Tech. MinION Mk1c|
+|------|---|---|---|
+|read leangth|150+150 (paired-end)|~20kbp|~50kbp|
+|error rate|~0.05%|~0.5%|~1%|
+|size|large|huge|small|
+|operating time|~2 days|~2 days|~2 days|
+|cost (10 Gbp)|~50|~200|~100|
+|Usage|Clinical diagnosis, research|sequencing project|real-time diagnosis, sequencing project|
+
+<!-- 2세대가 3세대에 의해 대체되고 하는게 아니라 동시에 사용된다. 3세대는 아직 임상 허가를 받지 못함 등등 -->
+
+## Next Generation Sequencers of 2020
+<!-- pre phasing과 phasing 문제 해결 시도들-->
+
+### Element Bioscience Avidity Sequencing
+* Bind avidite
+* Wash
+* Detect base
+* Remove avidite
+* Step with block
+* Remove block
+
+### PacBio Onso: Sequencing-by-binding (SBB)
+* Initiate
+* Interrogate
+* Activate
+* Incorporate
+
+<!-- imaging하는 구간과 합성 구간의 환경 등 조건을 다르게 해서 각각의 단계가 잘되게 했다 -->
+
+## "Next" Generation Sequencers
+
+In situ sequencing
+* FISSEQ (Fluorescent in situ sequencing)
+
+Single-molecule protein sequencing
+
+Protein Fingerprinting by FRET
+
+Massively parallel Edman degradation
+
+Nanopore Protein Sequencing
