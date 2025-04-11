@@ -47,4 +47,95 @@ GATK 기준으로 용어, 순서 결정.
 -->
 
 #### Phase 2: variant discovery and genotyping
+* Sample 1 reads, ..., Sample N reads (input)
+* SNPs, Indels, Structural variation (SV)
+* Raw variants (output)
+
+#### Phase 3: integrative analysis
+* Raw indels, Raw SNPs, Raw SVs (input)
+* External data
+  * Pedigrees, Population structure, Known variation, Known genotypes
+* Variant quality recalibration, genotype refinement
+* Analysis-ready variants (output)
+
+## FASTQ
+### Base calling: the conversion of signal to a nucleotide sequence
+Errors happen.
+Hopefully infrequently.
+
+### FASTQ format
+A standard format for storing and defining sequences from next-generation sequencing technologies.
+
+* Sequence ID: @SEQ_ID
+* Sequence: GATTTGGGGTTCA
+* Separator: +
+* Quality score: !''*((((***+)
+
+### FASTQ quality scores
+Estimate of confidence in each base.
+
+Qualities are based on the Phred scale and are encoded.
+
+Q = -10 * log_{10} (P_{err})
+
+FASTQ has had different encoding schemes for encoding PHRED quality scores.
+
+Quality score encoding based on ASCII table.
+
+Formula for getting PHRED quality from encoded quality: Q = ascii(char) - 33
+
+### SRA and ENA
+SRA and ENA are the major repositories for the sequencing data.
+* SRA: https://www.ncbi.nlm.nih.gov/sra
+* ENA: https://www.ebi.ac.uk/ena
+
+## Assembly
+
+### Genome assembly
+Genome assembly is the process of converting short reads into a detailed set of sequences corresponding to the chromosome(s) of an organism.
+
+### Genome assembly methods
+Overlap graph, de Bruijn graph, string graph
+
+## Alignment
+
+### Next-generation sequence: the problem of alignment
+Recent software tools allow the mapping (alignment) of millions or billions of short reads to a reference genome.
+For the human genome, this would take thousands of hours using BLAST.
+Reads may come from regions of repetitive DNA (exacerbated by sequencing errors)
+
+<!-- BWA가 압도적으로 많이 쓰인다 -->
+
+### Alignment to a reference genome: example of short-read alignment (Bowtie) results
+Format
+* Read name
+* Strand (+, -)
+* Reference to which reads match
+* Read sequence
+* Quality scores
+
+### Pileups
+Format
+* Reference sequence
+* Read depth
+* Reference sequence
+  * . and , denote agreement with reference on top, bottom strands
+
+### BWA: a popular short-read aligner
+Aligns short reads (<200 base pairs) to a reference genome.
+Fast and accurate.
+
+### Reads (FASTQ format) can be mapped to a reference genome using software tools such as BWA
+BWA is a popular aligner.
+It stands for "Burroughs-Wheeler Aligner" referring to the algorithmic approach.
+
+Considerations are speed and sensitivity.
+
+For all software, we measure error rates:
+using some gold standard we define true positive (TP) and true negative (TN) results, and we then define sensitivity and specificity.
+
+A standard format has been introduced called Sequence Alignment/Map (SAM).
+Its binary version is called BAM.
+
+
 
