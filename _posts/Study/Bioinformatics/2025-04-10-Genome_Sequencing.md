@@ -137,5 +137,38 @@ using some gold standard we define true positive (TP) and true negative (TN) res
 A standard format has been introduced called Sequence Alignment/Map (SAM).
 Its binary version is called BAM.
 
+### Other problems
+As repeat regions share lower identity, read mapping gains higher confidence.
 
+There is ambiguity mapping a read with a mismatch versus a deletion.
 
+## SAM/BAM
+<!-- alignment와 SAM/BAM은 중간고사에 항상 나오는 토픽 -->
+
+### SAM format
+A text-based standard for representing sequence alignments.
+
+In the dark ages, sequence aligners used disparate output formats.
+1000 Genomes Project sought to standardize.
+The result is imperfect, but it’s a huge improvement.
+
+Strengths of the SAM and BAM formats
+* Compressed: less disk hungry
+* Indexed: fast viewing, slicing, etc.
+* Single-end and paired-end
+* Relatively simple to produce
+* Good toolkits available
+
+### SAM format overview
+* QNAME
+* FLAG
+* RNAME
+* POS
+* MAPQ
+* CIGAR
+* MRNM
+* MPOS
+* ISIZE
+* SEQ  <!-- reference 방향을 따른다 -->
+* QUAL
+* OPT
