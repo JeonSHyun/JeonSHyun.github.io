@@ -161,14 +161,26 @@ Strengths of the SAM and BAM formats
 
 ### SAM format overview
 * QNAME
+  * Read or Pair name
 * FLAG
+  * Bitwise Flag
 * RNAME
+  * Reference sequence name
 * POS
+  * 1-based alignment start coordinate
 * MAPQ
+  * Mapping quality
 * CIGAR
+  * Extended CIGAR string
 * MRNM
+  * If paired, the mate's reference seq
 * MPOS
+  * If paired, the mate's alignment start
 * ISIZE
+  * If paired, the insert size
 * SEQ  <!-- reference 방향을 따른다 -->
+  * The sequence of the query/mate
 * QUAL
+  * The quality string for the query/mate
 * OPT
+  * Optional Tags
