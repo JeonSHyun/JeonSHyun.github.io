@@ -184,3 +184,27 @@ Strengths of the SAM and BAM formats
   * The quality string for the query/mate
 * OPT
   * Optional Tags
+
+### Edit distance
+How many edits (changes) must be made to a word or kmer to make it match (aligh) to another word or kmer?
+
+### The CIGAR string: endcode the details of the alignment
+Operation
+* M: match <!-- indel이 아니고 하나에서 다른걸로 바뀌면 match로 친다 -->
+* D: deletion w.r.t. reference
+* I: insertion w.r.t. reference
+* N: split or spaced alignment <!-- deletion이 너무 클 때 점수에는 들어가지 않게 처리 -->
+* S: soft-clipping <!-- alignment 하는것보다 안하는게 더 점수 상 이득이라고 할 때. 끝부분에서. 한 리드에는 반드시 두번까지 나타날 수 있다. (왼쪽 끝, 오른쪽 끝) 대부분이 끝부분 에러가 많이 나서 끝부분 제거를 그냥 하는 편 -->
+* H: hard-clipping <!-- 거의 안쓰임 -->
+* P: padding
+
+### The extended CIGAR string: M become = and X
+Operation
+* =: Exact match
+* X: Mismatch
+
+<!-- 사실상 요즘은 잘 안 쓴다 -->
+
+### The FLAG column
+<!-- 2진법 encoding. 4번과 16번을 제일 많이 사용함 -->
+
