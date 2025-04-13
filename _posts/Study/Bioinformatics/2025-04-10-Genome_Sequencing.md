@@ -208,3 +208,22 @@ Operation
 ### The FLAG column
 <!-- 2진법 encoding. 4번과 16번을 제일 많이 사용함 -->
 
+### SAMTools
+Use samtools to convert SAM to BAM
+* Create BWT of reference genome
+* Align paired-end FASTQ to BWT index
+* Convert SAM to BAM
+
+SAMTools tview visualization of reads from a BAM file.
+
+Integrative Genome Viewer (IGV): display of a BAM file (at two resolutions) and a VCF.
+
+## Variant Calling: SNVs
+Goal: find all inherited variants in an individual's diploid genome.
+To find inherited genetic variation by sequencing DNA from millions of cells.
+
+Each DNA cluster is amplified from a single strand from a single haploid chromosome from a single cell.
+
+<!-- Q: Heterozygous SNP을 포함한 샘플의 그 특정 위치에서 FASTQ 파일에 포함된 quality는 주변에 비해 낮게 나오는 경향이 있다? -> A: 아니다. 차이가 없다. (이유 다시 확인하기) -->
+
+
