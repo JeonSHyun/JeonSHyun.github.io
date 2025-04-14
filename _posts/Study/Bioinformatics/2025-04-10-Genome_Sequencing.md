@@ -226,4 +226,51 @@ Each DNA cluster is amplified from a single strand from a single haploid chromos
 
 <!-- Q: Heterozygous SNP을 포함한 샘플의 그 특정 위치에서 FASTQ 파일에 포함된 quality는 주변에 비해 낮게 나오는 경향이 있다? -> A: 아니다. 차이가 없다. (이유 다시 확인하기) -->
 
+Scenarios
+* An individual is homozygous for the reference allele
+* An individual is homozygous for an alternate allele
+* An individual is heterozygous for an alternate allele
 
+At least 30X (30 fold sequence coverage) genome is recommended.
+It confers sufficient power to find the majority of heterozygous allele.
+With 30 tosses (reads), we are much more likely to see an even mix of alternate and reference alleles at a heterozygous locus in a genome
+
+<!-- Heterozygous allele을 특히 더 분석하기 힘든 조건은?: somatic mutation analysis가 germline mutation analysis보다 더 어렵다. somatic은 발달 단계에서 생기거나 살면서 생기는 cell이 많기 때문에 binomial 분포로는 알 수가 없음. 통계적인 어려움 -->
+
+Depth tackles the allele sampling issue and lower quality scores.
+<!-- 요즘은 퀄리티가 상향평준화되었고, depth도 충분하기 때문에 퀄리티 낮은 read는 버리고 분석해도 문제가 없는 수준이 됨. -->
+
+<!-- IGV로 확인하는 부분은 다시 확인하면서 어떤 점을 중점으로 봐야 하는지 보기 -->
+
+* Random versus systemic error
+* Strand bias from PCR
+* Pileups of many differences from paralogy
+* Calling INDELs is much harder than SNPs
+
+## Variant Calling: SVs
+
+### Categories of structural variation (SV)
+<!-- 각각 어떻게 detect하는지 정리해보기 -->
+
+### Deletion
+### Novel sequence insertion
+### Mobile-element insertion
+### Inversion
+### Interspersed duplication
+### Tandem duplication
+
+## VCF
+
+### VCF format
+* VCF header
+  * INFO
+  * FORMAT
+  * Mandatory header lines: file format, CHROM POS REF ALT QUAL FILTER INFO FORMAT SAMPLE...
+* Body <!-- variant를 어떤걸 넣어야 한다 이런건 없고, 사용자가 원하는 내용 넣을 수 있다 -->
+  * Phased data <!-- |로 구분되어 있으면 엄마한테서 받았는지, 아빠한테서 받았는지 구분해놓았다는 의미. phased가 안된 경우: / 사용 -->
+  * AF = allele frequency
+
+<!-- POS는 vcf는 1부터, bcf는 0부터 시작한다 -->
+<!-- FORMAT이 GT:DP일 때 1/2:13이면 A, AT를 가지고 depth가 13임 -->
+
+<!-- genotype이 unknown인 경우는 대부분 quality filter에 걸렸거나 read가 부족한 경우임 -->
