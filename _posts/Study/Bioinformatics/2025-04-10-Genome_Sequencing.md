@@ -267,10 +267,124 @@ Depth tackles the allele sampling issue and lower quality scores.
   * FORMAT
   * Mandatory header lines: file format, CHROM POS REF ALT QUAL FILTER INFO FORMAT SAMPLE...
 * Body <!-- variant를 어떤걸 넣어야 한다 이런건 없고, 사용자가 원하는 내용 넣을 수 있다 -->
-  * Phased data <!-- |로 구분되어 있으면 엄마한테서 받았는지, 아빠한테서 받았는지 구분해놓았다는 의미. phased가 안된 경우: / 사용 -->
+  * Phased data: phased genotypes distinguish haplotype <!-- |로 구분되어 있으면 엄마한테서 받았는지, 아빠한테서 받았는지 구분해놓았다는 의미. phased가 안된 경우: / 사용 -->
   * AF = allele frequency
 
 <!-- POS는 vcf는 1부터, bcf는 0부터 시작한다 -->
 <!-- FORMAT이 GT:DP일 때 1/2:13이면 A, AT를 가지고 depth가 13임 -->
 
 <!-- genotype이 unknown인 경우는 대부분 quality filter에 걸렸거나 read가 부족한 경우임 -->
+
+### Allel frequency spectrum
+Most variants are rare.
+More than 50% of the 9 million variants discovered were present as a heterozygote in 1 out of the 60706 individuals (a singleton).
+
+Only one person with SNP is called singleton.
+
+### bcftools
+Use bcftools to handle VCF files.
+<!-- 실습 있음 -->
+
+## Visualizing NGS Data
+
+### Visualizing and tabulating next-generation sequence data
+W will next explore BEDtools, a set of programs used to analyze BAM, GTF, BED, VCF, and other file types.
+There are many ways to visualize BAM files.
+* Try Genome Workbench from NCBI
+* Upload your BAM file to a server and point to it using the UCSC Genome Browser
+* Use Integrative Genomics Viewer (IGV)
+* Use samtools tview
+
+## Significance
+Raw VCF files are naked.
+Interpretation requires annotation.
+
+### Annotation provides context for interpretation
+* UCSC
+  * Conservation
+  * Repeat elements
+  * Genome Gaps
+  * Cytobands
+  * Gene annotations
+  * Mappability
+  * DeCIPHER
+  * ISCA
+* dbSNP
+* gnomAD browser
+* ClinVar
+* OMIM
+* 1000 Genomes
+* ENCODE
+  * Chromatin marks
+  * DNA methylation
+  * RNA expression
+  * TF binding
+* Human Protein Reference Database
+* HGMD
+* KEGG
+* Pfam
+
+### Case study
+Mom and data are unaffected, kie (proband) is affected with rare, Mendelian disease phenotype.
+
+More than 40% of developmental disorders caused by de novo mutation.
+
+### Find variants that disrupt gene function
+Synonymous (silent)
+
+Non-synonymous (missense)
+* Impact sometimes hard to predict
+
+Stop-gain (nonsense)
+
+Stop-loss
+
+### Loss of function variants
+Nonsense SNP
+
+Frame-shift indel
+
+Splice site SNP
+
+Exon deletion
+
+Whole gene deletion
+
+### Annotating the effect of a variant on a transcript
+SnpEff, Variant Effect Predictor (VEP), ANNOVAR, Variant Annotation Tools
+
+Many tools + many transcript annotations = many answers
+<!-- 해석이 어렵다. 하나 insertion되었다고 해서 그 function에 어떤 영향이 있는지 보려면 뒤쪽 sequence까지 봐야하고.. -->
+
+### An example of the complexity
+Insertion of a singla A.
+Then, what is the impact?
+
+Variants overlap multiple transcripts and even genes.
+
+Apparent loss-of-function variants are enriched for error.
+
+If a disease phenotype is rare, the causal variant should also be similarly rare.
+<!-- coding gene의 경우에는 rare 유전자 모아서 function에 영향이 있는지 같은 방법 사용 가능 -->
+
+### gnomAD
+gnomAD reports the allele frequency from diverse ancestries.
+
+https://gnomad.broadinstitute.org/
+
+# Specialized Applications of NGS
+
+### Specialized next-generation sequence (NGS) application
+There are many useful applications of NGS technology.
+These include:
+RNA-seq to measure RNA levels ("gene expression" of genes and isoforms),
+chromatin immunoprecipitation sequencing (ChIP-Seq) to measure protein-DNA interactions,
+methyl-seq, FAIRE-seq, and many others.
+
+### Perspective
+Next-generation sequencing (NGS) technology is revolutionizing biology.
+We are now able to catalog genetic variation at unprecedented depth.
+
+There is rapid growth in the technologies used for NGS. 
+There are also vast numbers of software solutions for quality control, sequence alignment, genome assembly, variant calling (including single nucleotide variants, indels, and structural variants), and variant prioritization.
+Key file formats include FASTQ (“raw” reads), BAM/SAM (aligned reads), and VCF (variant calls). Many tools are available for the generation, analysis, and visualization of these types of files.
