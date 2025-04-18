@@ -154,6 +154,16 @@ What’s different from global alignment?
 * 0 is one of the arguments of the max (because of $\epsilon, \epsilon$)
 * Scoring function with differences < 0, matches > 0
 
+<!-- 
+global alignment와 local alignment의 차이
+- 첫 줄 0
+- 끝 줄 0
+- penalties
+- 매트릭스 값 채울 때 0 도입
+- 가장 최댓값에서부터 traceback 시작함
+- traceback 하다가 0이 나오면 끝
+-->
+
 Dynamic-programming implementation of this is called Smith-Waterman
 
 #### Smith-Waterman
@@ -194,6 +204,8 @@ Achieves similar sensitivity with dramatically reduced computation.
   * Query: nucleotide
   * Database: nucleotide
   * Notes: high similar seqs.
+
+<!-- BLAST는 뭐 어떤거 한다는건지? 검색. 외울필요까진 없다 -->
 
 ### Profile-based database search
 Distant homologs can’t be easily found using a single sequence. 
