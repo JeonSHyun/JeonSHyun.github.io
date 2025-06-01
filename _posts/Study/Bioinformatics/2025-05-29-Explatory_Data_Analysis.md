@@ -176,8 +176,62 @@ Examples: Pearson correlation, Spearman rank correlation, Kendall’s tau
 
 ## Data Visualization
 
+### Data visualization in EDA
+Numerical summaries can mislead.
+Datasets with identical summary statistics can have vastly different structures.
 
+Visualization Reveals Structure: Plots allow intuitive exploration of
+* Patterns
+* Relationships
+* Distributions
+* Anomalies
 
+Data visualization must be carried out on purpose
+* Exploration
+* Explanation
+* Persuasion
+
+### Data visualization: Delivering the story in your data
+An era of information overload
+* Excess amounts of information are overwhelming.
+* Raw data becomes useful only when we apply methods of deriving insight from it.
+
+We are intensively visual creatures
+* Few of use can detect patterns among rows of numbers.
+* But even young children can interpret bar charts, extracting meaning from those numbers’ visual representations.
+
+Data visualization is the fastest way to communicate it to others.
+
+### Components in data visualization
+
+#### Data type
+* Quantitative
+* Continuous
+* Discrete
+* Categorical
+
+#### Data relationship and plot type
+Statistics is about finding relationships in data.
+When it comes to the relationship, most people are familiar with for statistics is correlation.
+However, the relationship in your data can be more complicated as you consider more factors or find patterns that are not so linear.
+Biological experiments could be designed with multiple variables but also harbor many hidden variables.
+Data relationship is a major determinant for plot type.
+
+* Nominal comparison: a simple comparison of the quantitative values of subcategories
+* Time series: Tracking changes in values of a consistent metric over time
+* Correlation: Data with two or more variables that may demonstrate a positive or negative correlation to each other
+* Ranking: Comparing values in relative magnitude
+* Group: Discrete information or categorization
+  * Treemap
+* Proportion: Categorization with quantitation
+  * Pie Chart, Bars, Stacked Bars, Stacked Densities, Mosaic Plot, Treemap, Parallel Sets (Sankey)
+* Distribution: Talking about data property and model of your analysis
+  * Histogram, Density Plot, Cumulative Density, Q-Q plot, Boxplots, Violins, Strip Charts, Sina Plots, Stacked Histogram, Overlapping Densities, Ridgeline Plot
+* Deviation: How data points relate to each other, particularly how far any given data point differs from the mean.
+
+#### Colors and alpha
+#### Scales and axis
+#### Labels
 
 
 
