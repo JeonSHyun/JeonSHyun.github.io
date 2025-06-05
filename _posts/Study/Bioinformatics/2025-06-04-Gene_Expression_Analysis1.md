@@ -1,7 +1,7 @@
 ---
 title: Gene Expression Analysis (1)
 author: JSH
-date: 2025-06-05 10:55:00 +0800
+date: 2025-06-04 10:55:00 +0800
 categories: [Study, Bioinformatics]
 tags: [Study, Bioinformatics]
 use_math: true
