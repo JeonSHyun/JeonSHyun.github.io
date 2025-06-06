@@ -1,5 +1,5 @@
 ---
-title: Gene Expression Analysis (1)
+title: Gene Expression Analysis
 author: JSH
 date: 2025-06-04 10:55:00 +0800
 categories: [Study, Bioinformatics]
@@ -7,7 +7,7 @@ tags: [Study, Bioinformatics]
 use_math: true
 ---
 
-# Gene Expression Analysis (1)
+# Gene Expression Analysis
 
 *  Identifying differentially expressed genes between different experimental conditions or samples, such as comparing cancerous and non-cancerous tissue.
 *  Characterizing gene expression patterns in various cell types or tissues, such as identifying genes that are specifically expressed in brain cells.
@@ -202,3 +202,102 @@ RIN3은 안쓴다. 어지간하면 RIN9.5 이상의 좋은 RNA를 이용한다. 
 * Size selection or exclusion
 * Add sequencing adapters
 * Sequence
+
+## Key Considerations in RNA Analysis
+* Sample status
+  * Purity: Chemical purity, purity by cell type, etc.
+  * Quality: RNA integrity <!-- DEG 분석하는 RNA integrity는 비슷해야 결과가 이상하지 않게 나온다 -->
+  * Quantity: < 1 ng, 10–50 ng, 50–500 ng, ≥ 500 ng <!-- 양이 적으면 bias가 엄청 많이 걸린다. 양은 최대한 똑같이, 많이 하는게 좋다 -->
+* RNA sequencing shows short exons connected between long introns in the genome.
+  * Must consider in advance whether the experimental design allows proper mapping to the genome.
+* RNA abundance varies significantly.
+  * Differences can be up to 10⁵ to 10⁷-fold
+  * RNA sequencing involves random sampling. Highly expressed genes take up the majority of reads.
+  * Ribosomal RNA and mitochondrial RNA
+  * Ribosomal protein mRNA
+<!-- 
+DNA는 cell당 개수가 한 copy로 정해져있는데 RNA는 cell당 개수 차이가 엄청나게 많이 날 수 있다. 이러면 라이브러리 프랩할때 다 반영이 되어버린다.
+그래서 ribosomal RNA와 mitochondrial RNA는 제거하고 시작한다. 얘들이 너무 많이 나오기 때문.
+ribosomal protein mRNA는 반드시 제거하지는 않더라도 많이 나오기 때문에 주의.
+-->
+* RNA comes in various sizes
+  * Small RNAs require completely different preparation methods.
+  * For long RNAs, poly(A) selection can cause 3′ end bias.
+<!-- RNA는 화학적 성질이 비슷하다고 했지만 길이가 비슷할 때의 얘기. -->
+* RNA is more fragile than DNA.
+
+## Selection/depletion
+<!-- rRNA를 없애는 방법들 -->
+
+### Total RNA
+Includes all RNA species, with rRNA making up the majority; used without rRNA removal.
+* Broad transcript representation.
+* Abundant RNAs dominate
+* High unprocessed RNA
+* High genomic DNA
+<!-- total RNA: 도저히 rRNA를 제거할 수 없을 때 사용하는 특수 케이스 -->
+
+### rRNA reduction
+Selectively removes ribosomal RNA using complementary probes that hybridize to rRNA sequences.
+* Broad transcript representation
+* Abundant RNAs de-emphasized
+* High unprocessed RNA
+* High genomic DNA
+<!-- rRNA reduction: rRNA에 상보적인 서열 이용해서 제거. 효율 떨어짐 -->
+
+### PolyA selection
+Enriches mRNAs with poly-A tails, removing most rRNA and non-polyadenylated RNAs.
+* Limited transcript representation (polyA)
+* Abundant RNAs de-emphasized
+* Low unprocessed RNA
+* Low genomic DNA
+<!-- poly A selection이 가장 많이 사용됨. poly A가 없는 다른 RNA도 제거된다는 단점이 있다. -->
+
+### cDNA capture
+Uses probes to selectively capture cDNA of specific genes or transcripts of interest.
+* Limited transcript representation (targeted)
+* Abundant RNAs de-emphasized
+* Low unprocessed RNA
+* Low genomic DNA
+
+<!-- exome에 붙여서 함. exome에 못붙는 rRNA는 제거됨. exome enrichment 키트가 비싸서 잘 사용 안함. -->
+
+## Stranded & Unstranded
+In unstranded RNA-seq, the strand of origin (+ or −) of the RNA is not preserved.
+In stranded RNA-seq, the strand information of the RNA is retained.
+This allows for clear identification of the gene's transcriptional direction and precise genomic location.
+
+## RNA Quality Check
+RIN = RNA integrity number.
+
+0(bad) to 10 (good)
+
+<!-- 6만 되어도 깨진 RNA임. -->
+
+## Replicates
+### Technical Replicate
+Multiple instances of sequence generation
+* Flow Cells, Lanes, Indexes
+<!-- 같은 샘플인데 기술적으로 다르게 -->
+
+### Biological Replicate
+Multiple isolations of cells showing the same phenotype, stage or other experimental condition
+
+Some example concerns/ challenges: Environmental Factors, Growth Conditions, Time
+
+<!-- 다른 샐에서 나온 데이터 -->
+
+## RNA-seq Experimental Design
+* What insight is the goal?
+* Signal-to-noise ratio
+<!-- 원하지 않는 잡음에 해당하는 다른 cell들 때문에 DEG 결과가 안나올 가능성이 많다. 그래서 예시에도 single sorted했을때는 안나왔는데 double sorted하니까 엄청 많이 나와버림 -->
+* More sequence or more replication?
+<!-- expression level이 낮으면 read가 많이 필요하다. 예시의 y는 variability. 이게 낮은게 좋다.
+variability가 높을수록 read count 및 replicate도 많이 필요하다.
+-->
+* The source and quantity of data distribution vary greatly depending on the type of sample and experiment
+<!-- read count가 적어도 pathway를 만들어서 분석하면 잘 될수도 있다.. -->
+* Batch effect
+
+<-- batch correction을 잘 해야한다
+서로 비교하는 쌍끼리 맞춰서 sequencing해서 batch를 만들어야 한다. batch balancing해야 한다. -->
