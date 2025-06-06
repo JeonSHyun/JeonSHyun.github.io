@@ -299,5 +299,5 @@ variability가 높을수록 read count 및 replicate도 많이 필요하다.
 <!-- read count가 적어도 pathway를 만들어서 분석하면 잘 될수도 있다.. -->
 * Batch effect
 
-<-- batch correction을 잘 해야한다
+<!-- batch correction을 잘 해야한다
 서로 비교하는 쌍끼리 맞춰서 sequencing해서 batch를 만들어야 한다. batch balancing해야 한다. -->
