@@ -50,6 +50,7 @@ When prioritizing among protein-coding missense mutations
 <!-- 단백질의 경우에는 화학적인 성질이 모두 다르지만 RNA는 그렇지 않다 (실험적 문제) -->
 
 ## Bulk vs. single-cell
+
 | Category                    | Bulk RNA-seq                                                                 | Single-cell RNA-seq                                                                 |
 |-----------------------------|------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | Cost & Effort               | Relatively simple and inexpensive                                            | More expensive and burdensome                                                       |
@@ -61,6 +62,7 @@ When prioritizing among protein-coding missense mutations
 <!-- single cell은 cell끼리 분리하는 과정이 필요하다. 그래서 cell이 분리되려고 스트레스 받은 그 상태로 스냅샷을 얻는다 -->
 
 ## Bulk RNA-seq vs. Spatial transcriptome
+
 | Category                    | Bulk RNA-seq                                                                 | Spatial Transcriptomics                                                                |
 |-----------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
 | Cost & Effort               | Relatively simple and inexpensive                                            | More expensive and burdensome                                                         |
@@ -301,3 +303,75 @@ variability가 높을수록 read count 및 replicate도 많이 필요하다.
 
 <!-- batch correction을 잘 해야한다
 서로 비교하는 쌍끼리 맞춰서 sequencing해서 batch를 만들어야 한다. batch balancing해야 한다. -->
+
+## RNA-seq data process pipeline
+
+### Common analysis goals of RNA-Seq analysis (what can you ask of the data?)
+* Gene expression and differential expression
+* Alternative expression analysis
+* Transcript discovery and annotation
+* Allele specific expression
+  * Relating to SNPs or mutations
+* Mutation discovery
+* Fusion detection
+* RNA editing
+
+### Mapping/Alignment
+* Align to reference genome
+<!--
+Align to reference genome: 1) reference genome quality가 좋아야함, 2) gene annotation이 정확히 되어있어야함. 이 조건이 충족되었을 때 매우 좋은 방법
+-->
+* Align to transcriptome
+<!--
+그게 안될때는 transcriptome에 align할 수 있다. 치명적인 단점은 splicing isoform의 시퀀스가 크게 다르지 않다. 그래서 어디에 구분할지가 어렵다. genome에서는 genome 기준으로 position이 1개라서 더 간단.
+-->
+* De novo assembly
+<!-- 
+De novo assembly
+genome도 멀쩡한게 없고 transcriptome도 멀쩡하게 없다.
+sequence read만 가지고 RNA 이어붙여서 함.
+De novo assembly -> transcriptome align 이런식으로.
+바이러스같은 경우에는 이 방법을 사용.
+칼리스토는 genome assembly 안씀.
+-->
+
+### Handling Multi-mapping
+Approach to handle multireads
+* Ignore <!-- false negative 발생. 그러나 잘못 발현된다고 할 가능성이 없다는 장점. false positive가 완벽히 제거-->
+* Count once per alignment <!-- 원래 발현된 양보다 많이 count/발현 안되는데 된다고 말하니까 false positive 발생. 그러나 false negative 제거됨. -->
+* Split them equally <!-- false positive, false negative도 많지는 않지만 둘 다 존재 -->
+* Rescue based on uniquely mapped reads
+* Expectation-maximization
+* Read coverage based methods
+* Cluster methods
+
+<!-- 나머지들은 적당히 적용되지만 예측하기 어렵다는 단점이 있다 -->
+
+### Transcript Assembly
+* RNA-Seq reads - Align reads to genome - Assemble transcripts from spliced alignments
+* RNA-Seq reads - Assemble transcripts de novo - Align transcripts to genome
+
+<!-- 롱리드로 들어가면서 할 수 있게 되었다 -->
+
+### Expression Estimation
+* Difference in Sequencing Depth <!-- 전체적인 read depth 경향을 고려한다 -->
+* Difference in Gene Length <!-- 유전자 길이가 길수록 read가 많이 나오므로 고려한다 -->
+
+<!-- 이 두 factor는 너무나 강해서 모든 normalization에서 필요함 -->
+
+### Differential Expression Analysis
+DEG (Differentially Expressed Genes) are genes that show statistically significant differences in expression levels between different experimental conditions or groups.
+
+Replication is essential.
+
+### Downstream Analyses
+* Co-expression
+* Network construction
+* Module definition
+* Guilt-by-association predictions
+* Finding hub genes
+* Enrichment analyses
+* Differential co-expression analyses
+* Regulatory network identification
+
+## RNA-seq quantification methods
