@@ -375,3 +375,137 @@ Replication is essential.
 * Regulatory network identification
 
 ## RNA-seq quantification methods
+All commonly used mRNA quantification techniques—such as qPCR, microarray, and RNA-seq (e.g., RPKM)—aim to achieve a proportional relationship to the relative molar concentration as closely as possible.
+
+### Correction of difference in total read count
+RPM (reads per million) = (# reads mapped to genomic region) / (total # reads) $\times 10^6$
+
+### Correction of length difference
+RPKM (reads per kilobase, per million reads) = (# reads mapped to genomic region) / (effective region length in kb $\times$ total # reads) $\times 10^6$
+
+* Effect length: $L_{effective} = L_{actual} - L_{fragment} + 1$
+
+<!--
+effective length: L_effective
+effective length와 똑같지는 않지만  actual에 비해서는 bias가 덜 걸리고 실제로도 상대적으로 유사하게 나온다
+그래서 RPKM은 actual length가 아닌 effective length를 가지고 계산한다
+-->
+
+<!--
+RPKM의 문제를 보면 sample 2가 sample 1에 비해서 40배의 RNA가 나온다.. (말이안됨)
+그래서 바꾼게 TPM 방법. RNA 총량이 변화하지 않는다는 가정이 들어감.
+-->
+
+### Transcripts per million (TPM)
+TPM = (reads per Kb) / (total RPK in sample) $\times 10^6$
+
+TPM is also not suitable for comparison between samples.
+
+### Normalization for comparison between samples
+
+#### MA Plots
+The MA plot shows the $\log 2$ fold change (M) against the mean expression (A), highlighting genes with significant differential expression between two conditions.
+
+With the assumption that most genes are expressed equally, the log ratio should mostly be close to 0.
+
+* M (log ratio): $\log_2$ (Condition A / Condition B)
+  * The log difference in expression between two conditions
+  * Represents the magnitude of change (fold change) in expression
+* A (mean average): $1/2 \times \log_2$ (Condition A $\times$ Condition B)
+  * The average expression level across two conditions
+  * Represents the overall expression level
+
+<!--
+x축은 log2 평균
+y축은 log2 차이
+-->
+
+### Trimmed Mean of M-Values (TMM)
+The TMM procedure is doubly trimmed, by log-fold-changes $M^r_{gk}$ (sample k relative to sample r for gene g) and by absolute intensity ($A_g$).
+By default, we trim the $M_g$ values by 30% and the $A_g$ by 5%, but these settings can be tailored to a given experiment.
+
+$\log_2 (TMM_k^r) = \frac{\sum_{g \in G} M^r_{gk}/w^r_{gk}}{\sum_{g \in G} 1/w^r_{gk}}$
+
+$M^r_{gk} = \log_2 \frac{(Y_{gk}/N_k)}{(Y_{gr}/N_r)}$
+
+$w^r_{gk} = \frac{N_k - Y_{gk}}{N_k Y_{gk}} + \frac{N_k - Y_{gr}}{N_k Y_{gr}}$
+
+* r, k: samples
+* g: gene
+* Y: number of reads mapped to a gene
+* N: total number of reads in a sample
+
+<!--
+RNA seq에서는 대부분의 gene의 발현량은 변하지 않는다는 가정이 있다.
+이 가정을 강제로 맞추는 방법 중 제일 많이 쓰는게 TMM
+위아래로 30% 자르고 중간을 맞춰서 생각보다 많이 자른다.
+weight는 gene이 variation이 크면 작게 주고, 작으면 크게 주는 역할.
+수식을 외울 필요는 없고, 컨셉만 알면 된다.
+-->
+
+### Key assumptions
+* Most genes are not differentially expressed (implications for comparing very different treatments/conditions)
+* Approx. equivalent numbers of up and down regulated genes
+
+<!--
+절대몰농도 잴 수 없다. 몰농도 비례 = RNA의 개수를 센다.
+
+대부분의 유전자는 differentially expression되지 않는다는 게 중요한 가정이다.
+그게 깨지면 분석이 어렵다. (약물 처리해서 여러군데 영향을 줘버리면 이제 분석이 어렵다)
+-->
+
+## Approach to absolute quantification
+
+<!-- 절대정량은 불가능하기 때문에 상대정량을 하는데 그래도 절대정량을 하고 싶은 사람들을 위한 방법 -->
+
+### Spike-in Normalization
+Spike-in normalization is a method that uses externally added RNA molecules of known quantity to normalize gene expression data and account for technical variation.
+
+<!--
+Fraction in RNA-seq이 우리가 보는 양 (percentage) 비율만 나온다.
+그러나 원래는 모두 1의 양이기 때문에 이럴 때는 DEG가 잘못 나온다.
+그래서 spike-in을 동일한 양으로 넣어준다. 그래서 이 양을 이용해서 계산해준다. (밖에서 양을 아는 것을 집어넣는 것)
+-->
+
+### Practical Problems in Spike-in Normalization
+Each RNA molecule has a different sequence.
+(Length, G/C content, Secondary structure, etc.)
+
+The composition of RNA differs between samples.
+* Due to RNA-RNA pairing, fragmentation and reverse transcription efficiency can vary depending on the RNA and the sample.
+
+### Poly(A) + External RNA Contorls
+4 genes from B. subtilis.
+
+<!-- 
+spike-in은 여러개를 넣는다. 잘못하면 하나의 bias가 전체를 지배해버리기 때문이다.
+
+그래서 초창기에 넣은게 B.subtilis의 유전자 4개를 넣었다.
+박테리아 유전자는 poly A tail이 없음.
+-->
+
+### ERCC External Spike-in Controls
+92 Control transcriptions are divided into 4 sub-pools.
+
+<!-- ERCC는 92개의 seq를 4가지 다른 농도로.
+문제는 가격이 비싸다 -->
+
+### Lexogen Spike-In RNA Variants (SIRV)
+69 Splicing isoforms with different lengths from 7 exogenous genes.
+
+Often used in conjunction with ERCC controls.
+
+<!--
+ERCC는 isoform 구분을 얼마나 잘 하는지 그런거 모름
+SIRV는 ERCC와 함께 섞어서 쓴다
+그래서 더더욱 비쌈.
+-->
+
+### Universal Reference RNAs
+* Invitrogen Universal Human Reference RNA
+* Universal miRNA Reference Kit
+
+<!--
+Universal Reference RNAs를 사용하는 방법도 있다.
+human reference rna에서 여러 tissue에서 RNA를 모아서 섞어놓고, 미리 정해진 양만큼 들어있다. 이거르 바코드를 달아서 병렬로 seq한다면 비교 가능. mRNA, miRNA도 있다. 가격 굉장히 비싸다.
+-->
