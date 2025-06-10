@@ -98,5 +98,17 @@ As a result, both transcriptome and protein (epitope) information are captured a
 
 <!-- cell 표면에 어떤 게 붙어있는지 정보를 함께 제공하는 방법 -->
 
-
+### scATAC-seq
+<!-- scATAC-seq은 transposome을 이용해서 open chromatin을 식별하는 방법 -->
  
+scATAC-seq enables genome-wide profiling of chromatin accessibility at single-cell resolution.
+It identifies regulatory DNA regions by targeting open chromatin using Tn5 transposase within droplets containing isolated nuclei and barcoded beads.
+
+### Multiplexed assays
+TEA-seq: a trimodal assy for measurement of transcripts, epitopes, and accessibility in thousands of single cells.
+* T: poly-A capture. 3' cDNA library <!-- RNA expression -->
+* E: poly-A capture. ADT library <!-- antibody -->
+* A: Tn5-inserted oligo capture. ATAC-seq library <!-- open chromatin -->
+
+# Spatial Transcriptomics
+
