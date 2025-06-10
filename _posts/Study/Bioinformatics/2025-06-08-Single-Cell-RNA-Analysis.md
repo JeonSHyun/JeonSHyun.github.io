@@ -61,3 +61,42 @@ droplet 안에서 뭘 하는지?
 -->
 
 Droplets can now be broken, and remaining steps carried out in bulk.
+
+### Library Preb after Droplet
+* Double strand cDNA
+* cDNA Amplication (PCR #1)
+* Enzymatic Fragmentation
+* End Repair, A-Tail, Ligation <!-- 뒤에 DNA adapter 붙이기 위한 방법 -->
+* Clean up
+* Sample index PCR (PCR #2) <!-- sample index 붙인다. 따라서 sample index, cell barcode, umi. 바코드 총 세개 -->
+
+### Sequencing
+* Read 1 (28 bp):
+  * Cell Barcode – identifies the individual cell (typically 16 bp)
+  * UMI (Unique Molecular Identifier) – identifies unique transcripts (typically 10–12 bp)
+* Read 2 (91 bp):
+  * Contains the cDNA insert, derived from the original mRNA transcript.
+* Index Read (Sample Index, typically 8 bp):
+  * Contains the sample barcode.
+
+<!--
+P5, P7: flow cell에 붙여주는 부분
+Read 1: 10xBC와 UMI가 먼저 나오고, Poly(dT)VN나온다
+Read 2: 3' UTR 앞쪽, gene body 안쪽이 먼저 sequencing됨
+
+sample index는 Read 2의 반대쪽으로 읽는 방식으로.
+-->
+
+### Cellular Indexing of Transcriptomes and Epitomes by Sequencing (CITE-seq)
+CITE-seq allows simultaneous measurement of gene expression and protein abundance at the single-cell level by using DNA-barcoded antibodies that mimic mRNA.
+
+Antibodies are conjugated with a unique DNA barcode and a polyA tail.
+These tagged antibodies bind to surface proteins on cells.
+Cells are encapsulated with barcoded beads in droplets.
+After lysis, both mRNAs and antibody-oligos hybridize to the beads' RT primers.
+As a result, both transcriptome and protein (epitope) information are captured and indexed with the same cell barcode.
+
+<!-- cell 표면에 어떤 게 붙어있는지 정보를 함께 제공하는 방법 -->
+
+
+ 
