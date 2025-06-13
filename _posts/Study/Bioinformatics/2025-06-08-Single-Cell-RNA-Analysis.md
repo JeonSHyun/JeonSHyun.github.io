@@ -112,3 +112,82 @@ TEA-seq: a trimodal assy for measurement of transcripts, epitopes, and accessibi
 
 # Spatial Transcriptomics
 
+## What are the uses of spatial transcriptomics?
+* Preserves native tissue architecture.
+* Maps gene expression to exact locations.
+* Reveals tissue domains & microenvironments.
+* Captures cell-cell interactions in context.
+
+<!-- 뇌와 발생생물학에서 spatial transcriptome 연구를 많이 한다 -->
+
+## Sequencing-based ST (sST)
+A sequencing-based technique that determines the spatial localization of cells and their gene expression profiles within a tissue section.
+* Slide-seq, Q0X Visium, Stereo-seq
+* Standard NGS libraries
+* Computational spot deconvolution
+* Lower resolution, higher sensitivity
+
+Workflow
+* A tissue slide is prepared with spatially barcoded capture probes (usually arranged as a fixed oligonucleotide array).
+* A tissue section is placed on the slide and subjected to fixation and permeabilization to preserve RNA and allow it to diffuse.
+* mRNAs from the tissue hybridize to the capture probes on the slide surface.
+* Reverse transcription is performed to synthesize cDNA from the captured mRNA.
+* The cDNA is sequenced along with the spatial barcodes embedded in the slide, linking gene expression to specific positions.
+* A spatial gene expression map is reconstructed, showing where in the tissue each gene is expressed.
+
+<!--
+slie에다가 티슈를 올린다.
+특정 지역 스팟에 바코드가 있다.
+바코드를 빽뺵하게 깔면 resolution이 더 좋아진다
+
+디컨볼루션은 공간 전사체 데이터에서 각 spot에 어떤 세포 유형이 얼마나 섞여 있는지를 추정하는 계산 과정
+
+resolution이 낮다 = 바코드가 cell보다 훨씬 크기 때문
+sensitivity가 높다 = 발현량이 낮은 유전자도 detection 가능
+-->
+
+## Imaging-based ST (iST)
+Imaging-based Spatial Transcriptomics (iST) refers to a group of technologies that use fluorescence microscopy and in situ hybridization to visualize and quantify RNA transcripts directly within tissue sections.
+
+* MERFISH, seqFISH, RNAscope, Xenium
+* In situ hybridization + imaging
+* Single-molecule detection
+* Multiplexed combinational labeling
+* Higher resolution but fewer genes
+
+Workflow
+* Tissue preparation and fixation
+* In situ hybridization using gene-specific probes that bind to target mRNAs
+* Fluorescence labeling – either:
+  * Using different fluorophores per gene (limited multiplexing)
+  * or, using combinatorial barcoding with multiple rounds of imaging (high multiplexing)
+* Microscopy imaging – collecting fluorescence signals
+* Image processing to reconstruct gene expression maps at single-cell or subcellular resolution
+
+<!--
+cell을 fixiation하고 거기서 readout probe를 붙여서 깜빡거리게 한다.
+시간이 오래걸리지만 해상도 매우좋다! 어떤것은 cell resolution 이하까지 볼 수 잇다. (어떤 유전자는 핵 안에 있더라..)
+readout probe: 미리 지정해야만 detection 가능. 미리 어떤 유전자를 잡을지 결정해야한다. (pannel)
+multiplexed combinatorial labeling: 내가 detection하고 싶은 유전자 probe들을 여러 조합으로 해서 경우의 수에 따라서 하는 것.. -> gpt에게 물어보기 2^n-1개만큼.
+error correction 때문에 실제로는 조금 더 많이 피룡하다.
+단점: 유전자 개수가 제한된다
+-->
+
+Multiplexed combinatorial labeling is a strategy where gene-specific probes are labeled with combinations of fluorophores across multiple imaging rounds. 
+By decoding the unique sequence of colors (a barcode), many genes can be simultaneously detected beyond the limit of available fluorophores.
+
+## From Tissues to cell types and back again
+* Bulk analysis
+* Single-cell analysis
+* Spatial analysis
+
+<!--
+cell 단위를 할것이냐 image base를 할것이냐
+
+세개 다 같이 진행이 되어야 한다.
+bulk - 가격이 싸고, 발현량이 낮은것도 잘 잡는다. preliminary study에 사용. gene pannel을 잡기 위한 기본 데이터
+single-cell - clustering 쉽다. cell type과 종류 알아보기 좋다. sensitivity 좋다. 
+spatial - 공간정보 좋다. detection하는 유전자 개수 떨어진다.
+
+single-cell + spatial 같이 보는게 좋다.
+-->
