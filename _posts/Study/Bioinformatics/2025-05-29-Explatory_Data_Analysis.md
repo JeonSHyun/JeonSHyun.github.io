@@ -229,9 +229,44 @@ Data relationship is a major determinant for plot type.
   * Histogram, Density Plot, Cumulative Density, Q-Q plot, Boxplots, Violins, Strip Charts, Sina Plots, Stacked Histogram, Overlapping Densities, Ridgeline Plot
 * Deviation: How data points relate to each other, particularly how far any given data point differs from the mean.
 
+#### Plots used in Bioinformatics
+* Circular plots
+* MA plot
+  * $M = \log_2 (R/G) = \log_2 (R) - \log_2 (G)$: log2FoldChange
+  * $A = 1/2 \log_2 (RG) = 1/2 (\log_2 (R) + \log_2 (G))$: base mean <!-- 기하평균 -->
+<!-- 중간지점이 0이면 normalization이 잘 되었다고 볼 수 있다. 평균이 높을수록 noise가 적다. 대각선 패턴이 나오는 특징이 있다. -->
+* Volcano plot
+  * x-axis: log2 fold change
+  * y-axis: -log10 p-value
+<!-- 가운데 위치했는데 p-value가 높게 튀는 애들은 variation이 작거나 read count가 많은 애들.
+fold change많이 나오는데 p-value는 작으면 variation이 크거나 read count가 작은 애들.
+왼쪽 위에 위치하면 direct target, 오른쪽 위는 그 다음 타겟일 수도 있다.
+-->
+* QQ plot
+* Cumulative plot
+<!-- KS test 하기 좋음 -->
+* ROC Curve
+  * True positive rate: TP/(TP+FN)
+  * False positive rate: FP/(FP+TN)
+* Manhattan plot
+* Sashimi plot
+* Heatmaps
+
 #### Colors and alpha
-#### Scales and axis
-#### Labels
+Colors can be
+* discrete variables
+* continuous variables
+* direction
 
+Alpha (transparency) is additional information to colors for continuous, in particular with 0-100% scale.
 
+Color recommendation
+* Jet: problematic
+* Viridis, magma, plasma, inferno
+<!-- viridis가 좋다
+colorbrewer를 참고해서 색을 고를 수 있다!
+색맹도 문제가 되니까 잘 고르자
+-->
 
+### Principle of Data visualization
+Every visual elements - from marks and colors to grid lines and even the whitespace itself - carries meaning and must be deliberately purposed.
